@@ -8,4 +8,10 @@
 python tidy_csv.py examples/contacts.csv > tidy.csv
 ```
 
+Add `--dedupe` to also drop rows that are exact duplicates after tidying (the first copy is kept; the header row counts like any other row):
+
+```
+python tidy_csv.py --dedupe examples/contacts.csv > tidy.csv
+```
+
 Tests: `python -m unittest discover -s tests -t .` (standard library only). `PROJECT_BRIEF.md` is what coding agents read first.
